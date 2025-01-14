@@ -1,14 +1,16 @@
 /* eslint-disable react/prop-types */
 function BlueButton({ buttonName }) {
     return (
-      <button className="relative w-full max-w-[455px] h-[70px] sm:h-[80px] md:h-[90px] rounded-[16px] sm:rounded-[18px] md:rounded-[22px] bg-[#2DA5E1] font-Inter text-white text-[20px] sm:text-[24px] md:text-[30px] text-center flex justify-center items-center px-4">
-        <span>{buttonName}</span>
+      <>
+      <button className="text-[white] bg-[#2DA5E1] rounded-[22px] max-w-[455px] h-[90px] flex justify-center items-center font-Inter flex-col px-4 w-full relative">
+        <span className="text-[20px] sm:text-[24px] md:text-[30px] max-w-[200px] md:max-w-[300px]">{buttonName}</span>
         <img
           src="/tg.png"
           alt="Telegram Icon"
-          className="absolute right-2 sm:right-[-5%] md:right-[-10%] "
+          className="absolute md:right-[-10%] w-[60px] md:w-[80px] right-[-15%] "
         />
       </button>
+      </>
     );
   }
   
