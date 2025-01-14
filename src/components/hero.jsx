@@ -57,7 +57,7 @@ function Hero() {
               <div className="rounded-[35px] absolute right-[37.40%] top-0 hidden lg:block">
                 <LoanCalc />
               </div>
-              <img src="/hero_bg.png" className="mt-5 lg:mt-0" />
+              <img src="/hero_bg.png" className="mt-5 lg:mt-0 " />
             </div>
           </div>
         </div>

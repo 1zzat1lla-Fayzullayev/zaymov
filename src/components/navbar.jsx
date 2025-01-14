@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Wrapper from "../layout/wrapper";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => setOpenMenu(!openMenu);
+
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openMenu]);
 
   return (
     <>
