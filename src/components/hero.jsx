@@ -50,7 +50,10 @@ function Hero() {
               </div>
             </div>
             <div className="relative">
-              <img src="/calculatorBg.svg" className="absolute right-[37%] hidden lg:block" />
+              <img
+                src="/calculatorBg.svg"
+                className="absolute right-[37%] hidden lg:block"
+              />
               <div className="rounded-[35px] absolute right-[37.40%] top-0 hidden lg:block">
                 <LoanCalc />
               </div>

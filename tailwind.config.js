@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Montserrat: ["Montserrat", "serif"]
+        Montserrat: ["Montserrat", "serif"],
+        Inter: ["Inter", "serif"],
+        NotoSerif: ["Noto Serif", "serif"],
       }
     },
   },
