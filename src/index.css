@@ -5,8 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 .burger {
@@ -53,4 +53,17 @@ html{
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+}
+
+.custom_text {
+  position: relative; 
+  -webkit-text-stroke-color: #a1dfc0;
+  -webkit-text-stroke-width: 10px; 
+}
+.custom_text::after {
+  -webkit-text-stroke-width: 0; 
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
 }

@@ -4,13 +4,16 @@ import GreenButton from "../shared/greenButton";
 function FirstTexts() {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  };
   return (
     <>
       <Wrapper>
         <div className="mt-[50px] mx-[20px] xl:mx-0">
           <div>
-            <h2 className="custom_text text-[25px] md:text-[35px]">
+            <h2
+              className="custom_text text-[25px] md:text-[35px]"
+              data-text="Как максимально повысить шансы на получение займа:"
+            >
               Как максимально повысить шансы на получение займа:
             </h2>
             <ul className="ml-[30px] md:ml-[50px] mt-5">
@@ -37,7 +40,10 @@ function FirstTexts() {
           </div>
 
           <div className="mt-5">
-            <h2 className="custom_text text-[25px] md:text-[35px]">
+            <h2
+              className="custom_text text-[25px] md:text-[35px]"
+              data-text=" Почему одобрена меньшая сумма, чем была нужна?"
+            >
               Почему одобрена меньшая сумма, чем была нужна?
             </h2>
             <ul className="ml-[30px] md:ml-[50px] mt-5">
@@ -55,7 +61,10 @@ function FirstTexts() {
           </div>
 
           <div className="mt-5">
-            <h2 className="custom_text text-[25px] md:text-[35px]">
+            <h2
+              className="custom_text text-[25px] md:text-[35px]"
+              data-text="Почему отказали в получении микрозайма, что делать?"
+            >
               Почему отказали в получении микрозайма, что делать?
             </h2>
             <ul className="ml-[30px] md:ml-[50px] mt-5">
@@ -80,7 +89,11 @@ function FirstTexts() {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center items-center mt-[30px]" onClick={scrollTop}>
+          
+          <div
+            className="flex justify-center items-center mt-[30px]"
+            onClick={scrollTop}
+          >
             <GreenButton buttonName={"Вернуться к списку МФО"} />
           </div>
         </div>
