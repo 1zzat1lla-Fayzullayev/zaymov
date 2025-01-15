@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import CardSection from "./components/cardSection";
 import FinanceCard from "./components/financeCard";
 import FirstTexts from "./components/firstTexts";
@@ -18,6 +19,7 @@ function App() {
       <QuestionsPartTwo />
       <FinanceCard />
       <Form />
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }
