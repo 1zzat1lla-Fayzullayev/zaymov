@@ -149,7 +149,7 @@ function Form() {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="name">Фамилия Имя Отчество</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="name">Фамилия Имя Отчество</label>
               <input
                 type="text"
                 name="name"
@@ -157,7 +157,7 @@ function Form() {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[20px]"
               />
               {errors.name && (
                 <span className="text-red-500 text-sm">{errors.name}</span>
@@ -165,7 +165,7 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="amount">Необходимая сумма займа:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="amount">Необходимая сумма займа:</label>
               <input
                 type="number"
                 name="amount"
@@ -173,7 +173,7 @@ function Form() {
                 value={formData.amount}
                 onChange={handleInputChange}
                 required
-                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[20px]"
               />
               {errors.amount && (
                 <span className="text-red-500 text-sm">{errors.amount}</span>
@@ -181,7 +181,7 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="phone">Введите телефон:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="phone">Введите телефон:</label>
               <input
                 type="text"
                 name="phone"
@@ -189,7 +189,7 @@ function Form() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 placeholder="+7 (___) ___-__-__"
-                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[20px]"
               />
               {errors.phone && (
                 <span className="text-red-500 text-sm">{errors.phone}</span>
@@ -197,7 +197,7 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="snils">Ваш СНИЛС:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="snils">Ваш СНИЛС:</label>
               <input
                 type="text"
                 name="snils"
@@ -206,7 +206,7 @@ function Form() {
                 onChange={handleInputChange}
                 required
                 placeholder="XXXXXXXXXXX"
-                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[20px]"
               />
               {errors.snils && (
                 <span className="text-red-500 text-sm">{errors.snils}</span>
@@ -214,7 +214,7 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="inn">Ваш ИНН:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="inn">Ваш ИНН:</label>
               <input
                 type="text"
                 name="inn"
@@ -223,7 +223,7 @@ function Form() {
                 onChange={handleInputChange}
                 required
                 placeholder="Введите ИНН"
-                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[63px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[20px]"
               />
               {errors.inn && (
                 <span className="text-red-500 text-sm">{errors.inn}</span>
@@ -231,7 +231,7 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label htmlFor="situation">Опишите Вашу ситуацию:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="situation">Опишите Вашу ситуацию:</label>
               <textarea
                 name="situation"
                 id="situation"
@@ -239,7 +239,7 @@ function Form() {
                 onChange={handleInputChange}
                 required
                 placeholder="Например: срочно нужны деньги на...есть/нету просрочек..куда пробовали обращаться? "
-                className="bg-[#D9D9D9] h-[100px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00]"
+                className="bg-[#D9D9D9] h-[100px] px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22CA00] text-[16px] lg:text-[20px]"
               />
               {errors.situation && (
                 <span className="text-red-500 text-sm">{errors.situation}</span>
@@ -253,7 +253,7 @@ function Form() {
                 checked={formData.agreement}
                 onChange={handleInputChange}
               />
-              <label htmlFor="agreement">
+              <label className="text-[18px] lg:text-[20px]" htmlFor="agreement">
                 <span className="">Я принимаю условия</span>{" "}
                 <span className="text-[orange]">
                   пользовательского соглашения
@@ -264,8 +264,8 @@ function Form() {
               )}
             </div>
 
-            <p>Загрузите Фото:</p>
-            <ul className="font-[200]">
+            <p className="text-[20px] lg:text-[25px]">Загрузите Фото:</p>
+            <ul className="font-[200] text-[18px] lg:text-[20px]">
               <li>1) 2-3 страница паспорта</li>
               <li>2) Прописка</li>
               <li>3) СНИЛС</li>
