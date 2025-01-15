@@ -9,7 +9,7 @@ function Card() {
           target="_blank"
           rel="noopener noreferrer"
           href={card.cardLink}
-          key={card.cardName}
+          key={card}
         >
           <div className="border border-[#6a6e7e] flex flex-col justify-between rounded-[16px] overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
             <span className="inline-block ml-[16px] mr-[16px] px-[6px] py-[3px] break-words text-center leading-[16px] font-[600] bg-[#6a6e7e] text-white rounded-b-[16px]">

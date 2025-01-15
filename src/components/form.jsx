@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Wrapper from "../layout/wrapper";
 import toast from "react-hot-toast";
+import BlueButton from "../shared/blueButton";
+import GreenButton from "../shared/greenButton";
 
 export function formatPhoneNumber(input) {
   const digitsOnly = input.replace(/\D/g, "");
@@ -149,7 +151,9 @@ function Form() {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="name">Фамилия Имя Отчество</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="name">
+                Фамилия Имя Отчество
+              </label>
               <input
                 type="text"
                 name="name"
@@ -165,7 +169,9 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="amount">Необходимая сумма займа:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="amount">
+                Необходимая сумма займа:
+              </label>
               <input
                 type="number"
                 name="amount"
@@ -181,7 +187,9 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="phone">Введите телефон:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="phone">
+                Введите телефон:
+              </label>
               <input
                 type="text"
                 name="phone"
@@ -197,7 +205,9 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="snils">Ваш СНИЛС:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="snils">
+                Ваш СНИЛС:
+              </label>
               <input
                 type="text"
                 name="snils"
@@ -214,7 +224,9 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="inn">Ваш ИНН:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="inn">
+                Ваш ИНН:
+              </label>
               <input
                 type="text"
                 name="inn"
@@ -231,7 +243,9 @@ function Form() {
             </div>
 
             <div className="flex flex-col gap-[10px] mb-[20px]">
-              <label className="text-[18px] lg:text-[20px]" htmlFor="situation">Опишите Вашу ситуацию:</label>
+              <label className="text-[18px] lg:text-[20px]" htmlFor="situation">
+                Опишите Вашу ситуацию:
+              </label>
               <textarea
                 name="situation"
                 id="situation"
@@ -385,16 +399,44 @@ function Form() {
       </Wrapper>
 
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg text-center">
-            <h2 className="text-2xl font-bold mb-4">Спасибо!</h2>
-            <p>Форма успешно отправлена.</p>
-            <button
-              className="mt-4 bg-[#4CEC6E] px-4 py-2 rounded-md"
-              onClick={closeModal}
-            >
-              Закрыть
-            </button>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-[#EBEBEB] font-Inter w-full max-w-[600px] p-8 rounded-lg text-center shadow-xl transform transition-all duration-300 ease-in-out scale-95 hover:scale-100 h-[500px] relative z-[1000]">
+            <img src="/close.svg" className="w-[50px] absolute right-0 top-0 cursor-pointer" onClick={closeModal}/>
+            <div className="flex flex-col items-center justify-center">
+              <img src="/Check-mark.png" className="max-w-[120px] mb-6" />
+              <h2 className="text-[32px] font-semibold text-[#333] ">
+                Спасибо за заявку!
+              </h2>
+              <p className="font-semibold text-[#555] ">
+                Наш менеджер свяжется с вами в течение 15 минут для уточнения
+                деталей
+              </p>
+              <p className="mt-5 text-[#777] ">
+                Подписывайтесь на наши соц сети, чтобы быть в курсе важных
+                новостей
+              </p>
+            </div>
+
+            <div className="">
+              <button className="relative bg-[#2DA5E1] text-white rounded-xl w-full max-w-[380px] py-3 flex justify-center items-center font-semibold text-lg mx-auto transition-all duration-300 ease-in-out hover:bg-[#1d90c3] mt-2">
+                <span className="text-[20px] sm:text-[24px] md:text-[28px]">
+                  Больше займов в Telegram
+                </span>
+              </button>
+
+              <div className="flex items-center justify-center mt-2">
+                <button className="relative bg-[#22CA00] text-white rounded-xl w-full max-w-[380px] py-3 flex justify-center items-center font-semibold text-lg mx-auto transition-all duration-300 ease-in-out hover:bg-[#1e9c00]">
+                  <span className="text-[20px] sm:text-[24px] md:text-[28px]">
+                    Скачать PDF инструкцию
+                  </span>
+                </button>
+
+                <img
+                  src="/pdf.png"
+                  className="w-[50px] md:w-[70px]"
+                />
+              </div>
+            </div>
           </div>
         </div>
       )}
