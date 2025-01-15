@@ -3,7 +3,7 @@ import { cardData } from "../data/cardData";
 function Card() {
   return (
     <>
-      {cardData.map((card) => (
+      {cardData.slice(0, 12).map((card) => (
         <a
           className="offer offer_usp_inside block w-[288px]  transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
           target="_blank"
