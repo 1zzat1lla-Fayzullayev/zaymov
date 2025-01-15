@@ -76,18 +76,18 @@ function Form() {
 
   return (
     <Wrapper>
-      <div className="mt-[100px]">
+      <div className="mt-[100px] mx-[20px] xl:mx-0">
         {/* Header Section */}
         <div>
-          <h2 className="font-Inter text-[30px] italic font-extrabold leading-[35px]">
+          <h2 className="font-Inter text-[25px] md:text-[30px] italic font-extrabold leading-[35px]">
             Нужна помощь в получении денежных средств? Заполните данные, и наш
             менеджер поможет Вам взять необходимую сумму!
           </h2>
-          <h2 className="font-Inter text-[30px] italic font-extrabold leading-[35px] mt-[40px]">
+          <h2 className="font-Inter text-[25px] md:text-[30px] italic font-extrabold leading-[35px] mt-[40px]">
             Или скачайте файл PDF формата с нашими рекомендациями и контактами!
             Мы обязательно Вам поможем!
           </h2>
-          <div className="flex items-center gap-4 mt-[20px] text-[30px] font-Inter">
+          <div className="flex items-center gap-4 mt-[20px] text-[25px] md:text-[30px] font-Inter">
             <button className="bg-[#22CA00] rounded-[22px] w-[159px] h-[35px] flex justify-center items-center text-white">
               СКАЧАТЬ
             </button>
