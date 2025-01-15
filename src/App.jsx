@@ -7,6 +7,7 @@ import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import QuestionsPartTwo from "./components/questionsPartTwo";
 import Recommendation from "./components/recommendation";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <QuestionsPartTwo />
       <FinanceCard />
       <Form />
+      <Footer />
       <Toaster position="top-center" reverseOrder={false} />
     </>
   );
