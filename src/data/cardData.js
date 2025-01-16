@@ -6,7 +6,7 @@ export const cardData = [
     cardYear: "18 - 75 лет",
     cardImage: "/cardImages/zaymer.svg",
     cardLink:
-      "https://www.zaymer.ru/?utm_source=eCPAnder&utm_campaign=vip&utm_medium=cpa&utm_term=197741&wmid=197741&transaction_id=7c48d5cf2eb13881e232ec7cf438e429",
+      "https://my.saleads.pro/s/6ftx",
   },
   {
     cardName: "СрочноДеньги",
@@ -24,7 +24,7 @@ export const cardData = [
     cardYear: "21 - 74 лет",
     cardImage: "https://offers.credystore.com/offers/1354/logo/",
     cardLink:
-      "https://privsosed.ru/?track_id=415526837&webmaster_id=18933&affiliate_id=197741",
+      "https://privsosed.ru/?track_id=415600059&webmaster_id=18933&affiliate_id=197741",
   },
   {
     cardName: "ВебБанкир",
