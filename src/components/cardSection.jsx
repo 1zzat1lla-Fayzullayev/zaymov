@@ -8,7 +8,10 @@ function CardSection() {
     <>
       <Wrapper>
         <div className="flex flex-col">
-          <div className="flex items-center flex-col text-center mt-[100px]">
+          <div
+            className="flex items-center flex-col text-center mt-[100px]"
+            data-aos="fade-up"
+          >
             <h2 className="text-[#2f2f2f] text-[32px] font-[500]">
               20 лучших МФО с первым займом 0%
             </h2>
@@ -18,10 +21,18 @@ function CardSection() {
               повысят вероятность одобрения
             </p>
           </div>
-          <div className="mt-[50px] flex flex-wrap items-start justify-center xl:justify-start  gap-[15px]">
+          <div
+            className="mt-[50px] flex flex-wrap items-start justify-center xl:justify-start gap-[15px]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Card />
           </div>
-          <div className="flex flex-col items-center justify-center mt-[20px] gap-[20px] w-full">
+          <div
+            className="flex flex-col items-center justify-center mt-[20px] gap-[20px] w-full"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <GreenButton
               buttonName={"ПОКАЗАТЬ ЕЩЁ ЗАЙМЫ"}
               secondName={"(меньший % одобряемости)"}

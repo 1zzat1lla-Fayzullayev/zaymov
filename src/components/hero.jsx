@@ -1,17 +1,22 @@
 import Wrapper from "../layout/wrapper";
 import LoanCalc from "./loanCalc";
+import "aos/dist/aos.css";
 
 function Hero() {
+
   return (
     <div className="bg-[#f9fafe] px-[20px] xl:px-0">
       <Wrapper>
         <div className="flex items-center flex-col">
-          <h2 className="text-[24px] text-center lg:text-start lg:text-[35px] font-[500] text-[#2f2f2f] my-[50px]">
+          <h2
+            className="text-[24px] text-center lg:text-start lg:text-[35px] font-[500] text-[#2f2f2f] my-[50px]"
+            data-aos="fade-up"
+          >
             Поможем подобрать выгодный займ в МФО!
           </h2>
           <div className="flex items-center flex-col lg:flex-row">
             <div className="flex flex-col items-start gap-[40px]">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4" data-aos="fade-up">
                 <img src="/money.png" className="w-[60px]" />
                 <div>
                   <p className="text-[20px] font-[600] uppercase text-[#2f2f2f]">
@@ -23,7 +28,7 @@ function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4" data-aos="fade-up" data-aos-delay="200">
                 <img src="/star_hero.png" className="w-[60px]" />
                 <div>
                   <p className="text-[20px] font-[600] uppercase text-[#2f2f2f]">
@@ -36,7 +41,7 @@ function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
                 <img src="/like_hand.png" className="w-[60px]" />
                 <div>
                   <p className="text-[20px] font-[600] uppercase text-[#2f2f2f]">
@@ -49,7 +54,7 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" data-aos="fade-up" data-aos-delay="600">
               <img
                 src="/calculatorBg.svg"
                 className="absolute right-[37%] hidden lg:block"

@@ -8,8 +8,17 @@ import Navbar from "./components/navbar";
 import QuestionsPartTwo from "./components/questionsPartTwo";
 import Recommendation from "./components/recommendation";
 import Footer from "./components/footer";
+import { useEffect } from "react";
+import Aos from "aos";
 
 function App() {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true, 
+      // disable: () => window.innerWidth < 768,
+    });
+  }, []);
   return (
     <>
       <Navbar />
