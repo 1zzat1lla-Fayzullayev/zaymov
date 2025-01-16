@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import Wrapper from "../layout/wrapper";
 import LoanCalc from "./loanCalc";
 import "aos/dist/aos.css";
+import Aos from "aos";
 
 function Hero() {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   return (
     <div id="t" className="bg-[#f9fafe] px-[20px] xl:px-0">

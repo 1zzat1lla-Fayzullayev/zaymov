@@ -29,20 +29,22 @@ function Navbar() {
             </span>
           </div>
 
-          <Link to={'/'} className="items-center gap-3 hidden md:flex">
+          <Link to={"/"} className="items-center gap-3 hidden md:flex">
             <img src="/star.png" className="max-w-[30px]" />
             <span className="cursor-pointer">Лучшие МФО</span>
           </Link>
-          <Link to={'/other-mfo'} className="items-center gap-3 hidden md:flex">
+          <Link to={"/other-mfo"} className="items-center gap-3 hidden md:flex">
             <img src="/gift.png" className="max-w-[30px]" />
             <span className="cursor-pointer">Малоизвестные МФО</span>
           </Link>
-          <div className="items-center gap-3 hidden md:flex">
-            <img src="/queastion.png" className="max-w-[30px]" />
-            <span className="text-[#828282] cursor-pointer">
-              Ответы на вопросы
-            </span>
-          </div>
+          <a href="#question">
+            <div className="items-center gap-3 hidden md:flex">
+              <img src="/queastion.png" className="max-w-[30px]" />
+              <span className="text-[#828282] cursor-pointer">
+                Ответы на вопросы
+              </span>
+            </div>
+          </a>
 
           <div
             className={`burger ${openMenu ? "open" : ""} block md:hidden`}
@@ -61,13 +63,22 @@ function Navbar() {
         }`}
       >
         <div className="flex gap-3 flex-col items-center justify-center h-full">
-          <a href="#" onClick={toggleMenu} className="text-[18px] font-[600]">
-            Лучшие МФО
-          </a>
-          <a href="#" onClick={toggleMenu} className="text-[18px] font-[600]">
-            Малоизвестные МФО
-          </a>
-          <a href="#" onClick={toggleMenu} className="text-[18px] font-[600]">
+          <Link to={"/"}>
+            <a href="#" onClick={toggleMenu} className="text-[18px] font-[600]">
+              Лучшие МФО
+            </a>
+          </Link>
+          <Link to={"/other-mfo"}>
+            <a href="#" onClick={toggleMenu} className="text-[18px] font-[600]">
+              Малоизвестные МФО
+            </a>
+          </Link>
+
+          <a
+            href="#question"
+            onClick={toggleMenu}
+            className="text-[18px] font-[600]"
+          >
             Ответы на вопросы
           </a>
         </div>

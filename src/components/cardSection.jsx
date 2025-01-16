@@ -1,9 +1,21 @@
+import { useNavigate } from "react-router-dom"; 
+import { useEffect } from "react"; 
 import Wrapper from "../layout/wrapper";
 import BlueButton from "../shared/blueButton";
 import GreenButton from "../shared/greenButton";
 import Card from "./card";
 
 function CardSection() {
+  const navigate = useNavigate(); 
+
+  const handleGreenButtonClick = (path) => {
+    navigate(path);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [window.location.pathname]);
+
   return (
     <>
       <Wrapper>
@@ -36,7 +48,11 @@ function CardSection() {
                   ? "МФО с лучшим одобрением"
                   : "ПОКАЗАТЬ ЕЩЁ ЗАЙМЫ"
               }
-              secondName={window.location.pathname !== "/other-mfo" && "(меньший % одобряемости)"}
+              secondName={
+                window.location.pathname !== "/other-mfo" &&
+                "(меньший % одобряемости)"
+              }
+              onClick={() => handleGreenButtonClick("/other-mfo")} 
             />
             <a href="https://t.me/leadssuYado_bot" target="_blank">
               <BlueButton buttonName={"Больше займов в Telegram"} />

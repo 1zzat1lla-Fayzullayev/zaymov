@@ -8,17 +8,12 @@ import Navbar from "./components/navbar";
 import QuestionsPartTwo from "./components/questionsPartTwo";
 import Recommendation from "./components/recommendation";
 import Footer from "./components/footer";
-import { useEffect } from "react";
-import Aos from "aos";
+// import { useEffect } from "react";
+// import Aos from "aos";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  useEffect(() => {
-    Aos.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
+ 
   return (
     <Router>
       <Routes>

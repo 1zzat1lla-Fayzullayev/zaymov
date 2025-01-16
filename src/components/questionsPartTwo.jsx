@@ -4,7 +4,7 @@ import BlueButton from "../shared/blueButton";
 function QuestionsPartTwo() {
   return (
     <Wrapper>
-      <div className="p-6 bg-gray-50 mt-[50px] rounded-[5px]">
+      <div className="p-6 bg-gray-50 mt-[50px] rounded-[5px]" id="question">
         <div className="space-y-6">
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-800">
