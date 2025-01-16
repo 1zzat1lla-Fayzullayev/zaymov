@@ -10,28 +10,77 @@ import Recommendation from "./components/recommendation";
 import Footer from "./components/footer";
 import { useEffect } from "react";
 import Aos from "aos";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {
     Aos.init({
       duration: 800,
-      once: true, 
-      // disable: () => window.innerWidth < 768,
+      once: true,
     });
   }, []);
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <CardSection />
-      <FirstTexts />
-      <Recommendation />
-      <QuestionsPartTwo />
-      <FinanceCard />
-      <Form />
-      <Footer />
-      <Toaster position="top-center" reverseOrder={false} />
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <CardSection />
+              <FirstTexts />
+              <Recommendation />
+              <QuestionsPartTwo />
+              <FinanceCard />
+              <Form />
+              <Footer />
+              <Toaster position="top-center" reverseOrder={false} />
+            </>
+          }
+        />
+
+<Route
+          path="/more-cards"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <CardSection />
+              <FirstTexts />
+              <Recommendation />
+              <QuestionsPartTwo />
+              <FinanceCard />
+              <Form />
+              <Footer />
+              <Toaster position="top-center" reverseOrder={false} />
+            </>
+          }
+        />
+
+
+<Route
+          path="/other-mfo"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <CardSection />
+              <FirstTexts />
+              <Recommendation />
+              <QuestionsPartTwo />
+              <FinanceCard />
+              <Form />
+              <Footer />
+              <Toaster position="top-center" reverseOrder={false} />
+            </>
+          }
+        />
+
+
+
+      </Routes>
+    </Router>
   );
 }
 

@@ -34,13 +34,20 @@ function CardSection() {
             data-aos-delay="400"
           >
             <GreenButton
-              buttonName={"ПОКАЗАТЬ ЕЩЁ ЗАЙМЫ"}
+              buttonName={window.location.pathname === '/more-cards' ? "Малоизвестные МФО" : window.location.pathname === '/other-mfo' ? 'МФО с лучшим одобрением' : "ПОКАЗАТЬ ЕЩЁ ЗАЙМЫ"}
               secondName={"(меньший % одобряемости)"}
             />
             <a href="https://t.me/leadssuYado_bot" target="_blank">
               <BlueButton buttonName={"Больше займов в Telegram"} />
             </a>
           </div>
+
+         {
+          window.location.pathname === "/other-mfo" &&  <div className="dive-secrete flex flex-col justify-center items-center gap-6 mt-8">
+          <p className="text-[#000] text-[30px] font-extrabold font-Inter text-center">Хотите перейти в профессиональный сервис подбора МФО? </p>
+          <button className="text-[#fff] text-[31px] font-Inter font-normal bg-[#22CA00] rounded-[22px] leading-[normal] py-[2px] px-[18px]">Открыть</button>
+          </div>
+         }
         </div>
       </Wrapper>
     </>

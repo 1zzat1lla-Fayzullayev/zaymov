@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 function Hero() {
 
   return (
-    <div className="bg-[#f9fafe] px-[20px] xl:px-0">
+    <div id="t" className="bg-[#f9fafe] px-[20px] xl:px-0">
       <Wrapper>
         <div className="flex items-center flex-col">
           <h2

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../layout/wrapper";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -28,14 +29,14 @@ function Navbar() {
             </span>
           </div>
 
-          <div className="items-center gap-3 hidden md:flex">
+          <Link to={'/'} className="items-center gap-3 hidden md:flex">
             <img src="/star.png" className="max-w-[30px]" />
             <span className="cursor-pointer">Лучшие МФО</span>
-          </div>
-          <div className="items-center gap-3 hidden md:flex">
+          </Link>
+          <Link to={'/other-mfo'} className="items-center gap-3 hidden md:flex">
             <img src="/gift.png" className="max-w-[30px]" />
             <span className="cursor-pointer">Малоизвестные МФО</span>
-          </div>
+          </Link>
           <div className="items-center gap-3 hidden md:flex">
             <img src="/queastion.png" className="max-w-[30px]" />
             <span className="text-[#828282] cursor-pointer">
