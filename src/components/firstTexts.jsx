@@ -1,5 +1,4 @@
 import Wrapper from "../layout/wrapper";
-import GreenButton from "../shared/greenButton";
 
 function FirstTexts() {
   const scrollTop = () => {
@@ -89,12 +88,19 @@ function FirstTexts() {
               </li>
             </ul>
           </div>
-          
+
           <div
             className="flex justify-center items-center mt-[30px]"
             onClick={scrollTop}
           >
-            <GreenButton buttonName={"Вернуться к списку МФО"} />
+            <a href="#mfo">
+              <button className="text-[white] bg-[#22CA00] rounded-[22px] max-w-[455px] h-[90px] flex justify-center items-center font-Inter flex-col px-4">
+                <span className="text-[20px] sm:text-[24px] md:text-[30px]">
+                  Вернуться к списку МФО
+                </span>
+                <span className="text-[15px]">(меньший % одобряемости)</span>
+              </button>
+            </a>
           </div>
         </div>
       </Wrapper>

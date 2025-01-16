@@ -40,7 +40,7 @@ function App() {
           }
         />
 
-<Route
+        <Route
           path="/more-cards"
           element={
             <>
@@ -58,8 +58,7 @@ function App() {
           }
         />
 
-
-<Route
+        <Route
           path="/other-mfo"
           element={
             <>
@@ -76,9 +75,6 @@ function App() {
             </>
           }
         />
-
-
-
       </Routes>
     </Router>
   );

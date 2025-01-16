@@ -1,15 +1,26 @@
 import { cardData } from "../data/cardData";
 
 function Card() {
+  let startIndex = 0;
+  let endIndex = 12;
+
+  if (window.location.pathname === "/more-cards") {
+    startIndex = 12;
+    endIndex = 24;
+  } else if (window.location.pathname === "/other-mfo") {
+    startIndex = 24;
+    endIndex = 36;
+  }
+
   return (
     <>
-      {cardData.slice(0, 12).map((card) => (
+      {cardData.slice(startIndex, endIndex).map((card) => (
         <a
-          className="offer offer_usp_inside block w-[288px]  transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
+          className="offer offer_usp_inside block w-[288px] transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
           target="_blank"
           rel="noopener noreferrer"
           href={card.cardLink}
-          key={card}
+          key={card.cardName} 
         >
           <div className="border border-[#6a6e7e] flex flex-col justify-between rounded-[16px] overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
             <span className="inline-block ml-[16px] mr-[16px] px-[6px] py-[3px] break-words text-center leading-[16px] font-[600] bg-[#6a6e7e] text-white rounded-b-[16px]">
@@ -23,6 +34,7 @@ function Card() {
                     <img
                       src={card.cardImage}
                       className="object-contain w-full h-full"
+                      alt={card.cardName}
                     />
                   </div>
                   <p className="text-[#2f2f2f] font-semibold truncate text-[16px]">

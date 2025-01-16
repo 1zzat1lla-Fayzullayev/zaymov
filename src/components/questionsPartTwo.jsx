@@ -1,12 +1,7 @@
 import Wrapper from "../layout/wrapper";
 import BlueButton from "../shared/blueButton";
-import GreenButton from "../shared/greenButton";
 
 function QuestionsPartTwo() {
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <Wrapper>
       <div className="p-6 bg-gray-50 mt-[50px] rounded-[5px]">
@@ -222,12 +217,14 @@ function QuestionsPartTwo() {
           </section>
         </div>
         <div className="flex flex-col items-center justify-center mt-[20px] gap-[20px] w-full">
-          <div onClick={scrollTop}>
-            <GreenButton
-              buttonName={"Вернуться к списку МФО"}
-              secondName={"(меньший % одобряемости)"}
-            />
-          </div>
+          <a href="#mfo">
+            <button className="text-[white] bg-[#22CA00] rounded-[22px] max-w-[455px] h-[90px] flex justify-center items-center font-Inter flex-col px-4">
+              <span className="text-[20px] sm:text-[24px] md:text-[30px]">
+                Вернуться к списку МФО
+              </span>
+              <span className="text-[15px]">(меньший % одобряемости)</span>
+            </button>
+          </a>
           <a href="https://t.me/leadssuYado_bot" target="_blank">
             <BlueButton buttonName={"Больше займов в Telegram"} />
           </a>
