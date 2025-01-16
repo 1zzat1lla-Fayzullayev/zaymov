@@ -441,6 +441,10 @@ function Form() {
           </div>
         </div>
       )}
+
+      <div>
+        <img src="/docs.jpg" className="justify-center items-center mx-auto w-full max-w-[800px] mt-[22px] hidden lg:flex" />
+      </div>
     </>
   );
 }
