@@ -36,7 +36,7 @@ function CardSection() {
                   ? "МФО с лучшим одобрением"
                   : "ПОКАЗАТЬ ЕЩЁ ЗАЙМЫ"
               }
-              secondName={"(меньший % одобряемости)"}
+              secondName={window.location.pathname !== "/other-mfo" && "(меньший % одобряемости)"}
             />
             <a href="https://t.me/leadssuYado_bot" target="_blank">
               <BlueButton buttonName={"Больше займов в Telegram"} />
