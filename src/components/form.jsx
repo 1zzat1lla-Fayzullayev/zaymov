@@ -429,13 +429,16 @@ function Form() {
               </a>
 
               <div className="flex items-center justify-center mt-2">
-                <button className="relative bg-[#22CA00] text-white rounded-xl w-full max-w-[380px] py-3 flex justify-center items-center font-semibold text-lg mx-auto transition-all duration-300 ease-in-out hover:bg-[#1e9c00]">
+                <a
+                  href="#" 
+                  download 
+                  className="relative bg-[#22CA00] text-white rounded-xl w-full max-w-[380px] py-3 flex justify-center items-center font-semibold text-lg mx-auto transition-all duration-300 ease-in-out hover:bg-[#1e9c00]"
+                >
                   <span className="text-[20px] sm:text-[24px] md:text-[28px]">
                     Скачать PDF инструкцию
                   </span>
-                </button>
-
-                <img src="/pdf.png" className="w-[50px] md:w-[70px]" />
+                  <img src="/pdf.png" className="w-[50px] md:w-[70px] ml-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -443,7 +446,10 @@ function Form() {
       )}
 
       <div>
-        <img src="/docs.jpg" className="justify-center items-center mx-auto w-full max-w-[800px] mt-[22px] hidden lg:flex" />
+        <img
+          src="/docs.jpg"
+          className="justify-center items-center mx-auto w-full max-w-[800px] mt-[22px] hidden lg:flex"
+        />
       </div>
     </>
   );
